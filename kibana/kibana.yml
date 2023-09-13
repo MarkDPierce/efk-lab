@@ -1,0 +1,8 @@
+server.host: "0.0.0.0"
+server.shutdownTimeout: "5s"
+elasticsearch.hosts: ["http://elasticsearch:9200"]
+monitoring.ui.container.elasticsearch.enabled: true
+elasticsearch.ssl.verificationMode: "none"
+elasticsearch.username: "kibana"
+# Please use the readme to figure out how to get a working Password
+elasticsearch.password: "ImWURr93IMhGSHgThdJ7"
