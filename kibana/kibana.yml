@@ -5,4 +5,4 @@ monitoring.ui.container.elasticsearch.enabled: true
 elasticsearch.ssl.verificationMode: "none"
 elasticsearch.username: "kibana"
 # Please use the readme to figure out how to get a working Password
-elasticsearch.password: "ImWURr93IMhGSHgThdJ7"
+elasticsearch.password: ""

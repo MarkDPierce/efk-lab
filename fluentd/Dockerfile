@@ -1,6 +1,4 @@
 FROM fluent/fluentd:v1.12-debian-arm64-1
-# NON ARM based image
-#FROM fluent/fluentd:v1.12.0-debian-1.0
 
 # Use root account to use apt
 USER root
@@ -19,7 +17,10 @@ RUN buildDeps="sudo make gcc g++ libc-dev" \
  && rm -rf /var/lib/apt/lists/* \
  && rm -rf /tmp/* /var/tmp/* /usr/lib/ruby/gems/*/cache/*.gem
 
-COPY ./fluent.conf /fluentd/etc/
+#
+# Not used if you map the directory in docker-compose
+# COPY conf /fluentd/etc/
+# 
 COPY entrypoint.sh /bin/
 
 RUN chmod +x /bin/entrypoint.sh
