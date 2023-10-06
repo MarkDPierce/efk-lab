@@ -12,7 +12,7 @@ Execute an interactive shell to the elastic container. `docker exec -it elastic 
 
 Once you have a shell session into the elastic instance you can run the following command to generate credential information. `bash bin/elasticsearch-setup-passwords auto`
 
-Copy the generated output somewhere you can return to and make sure you update `kibana.yml` and the fluentd config file `fluent.conf` and rerun your make command to redeploy with the configured credentials.
+Copy the generated output somewhere you can return to and make sure you update `kibana.yml` and the fluentd config file `fluent.conf`. It is best to run `make nginx_down` or `make httpd_down` to remove the containers. Dont worry the credential info for elastic is saved in a docker volume that doesnt get deleted. Re-run your make command to bring everything up with the credentials. Failing to do it in this manor may create auth issues.
 
 If you have already deployed the stack and generated the password information. Be aware the storage volume can persist making a new deployment fail due to the credentials being stored in this docker volume from a prior deployment. Just run `docker volume rm esdata` to scrub that storage.
 
