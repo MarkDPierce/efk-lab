@@ -4,7 +4,7 @@ This should make it easier to develop and prototype fluentd configurations and h
 
 ## Instructions
 
-A make file is provided to make deployment pretty simple and easy. You can run `make nginx` or `make httpd` to deploy an EFK stack with a corsiponding web server to generate some logs. You can also run `make nginx_down` or `make httpd_down` to remove the deployment
+A make file is provided to make deployment pretty simple and easy. You can run `make nginx` or `make httpd` to deploy an EFK stack with a corisponding web server to generate some logs. You can also run `make nginx_down` or `make httpd_down` to remove the deployment
 
 #### Generating credentials
 
